@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Maggi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 50px;
+        }
+
+        .left-section, .right-section {
+            width: 50%;
+            padding: 20px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        h1, h2, h3 {
+            color: #333;
+        }
+
+        .logo img {
+            width: 100px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        .social-login button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .facebook-btn {
+            background-color: #3b5998;
+            color: white;
+        }
+
+        .google-btn {
+            background-color: #db4437;
+            color: white;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        form label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        form input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+        form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .forgot-password {
+            display: block;
+            margin-top: 10px;
+            text-align: right;
+        }
+
+        .right-section {
+            text-align: center;
+        }
+
+        .register-btn {
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .benefits {
+            margin-top: 20px;
+        }
+
+        .benefits ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .benefits ul li {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+
+        footer {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            margin-top: 20px;
+        }
+
+        .social-icons a img {
+            width: 24px;
+            margin-right: 10px;
+        }
+
+        .language-switch button {
+            background-color: transparent;
+            border: 1px solid white;
+            color: white;
+            padding: 5px 10px;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+
+        .footer-links a {
+            color: white;
+            margin-left: 20px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-section">
+            <div class="logo">
+                <img src="data:image/jpeg;base64,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" alt="Maggi Logo">
+            </div>
+            <h1>My Maggi</h1>
+            <p>Welcome back!</p>
+            <div class="social-login">
+                <button class="facebook-btn">Sign in with Facebook</button>
+                <button class="google-btn">Sign in with Google</button>
+            </div>
+            <form action="#" method="post">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" placeholder="Enter Your E-mail Here*" required>
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter Your Password Here*" required>
+                <button type="submit">Login via E-mail</button>
+            </form>
+            <a href="#" class="forgot-password">Forgot your password?</a>
+        </div>
+        
+        <div class="right-section">
+            <h2>Not registered yet?</h2>
+            <button class="register-btn">Register</button>
+            <div class="benefits">
+                <h3>Join Maggi today!</h3>
+                <ul>
+                    <li>Your personal newsletter with exciting recipes and ideas</li>
+                    <li>Personalize your newsletter to your preferences</li>
+                    <li>Get to know about Maggi products</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="social-icons">
+            <a href="#"><img src="https://www.maggi.in/sites/default/files/2020-01/facebook.svg" alt="Facebook"></a>
+            <a href="#"><img src="https://www.maggi.in/sites/default/files/2020-01/youtube.svg" alt="YouTube"></a>
+            <a href="#"><img src="https://www.maggi.in/sites/default/files/2020-02/instagram.svg" alt="Instagram"></a>
+        </div>
+        <div class="language-switch">
+            <button>EN</button>
+            <button>HI</button>
+            <button>MR</button>
+            <button>TE</button>
+            <button>KN</button>
+        </div>
+        <div class="footer-links">
+            <a href="#">Contact Us</a>
+            <a href="#">Terms and Conditions</a>
+            <a href="#">Copyright</a>
+            <a href="#">Privacy Policy</a>
+        </div>
+    </footer>
+</body>
+</html>
+
