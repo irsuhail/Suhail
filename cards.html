@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cards</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: black;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        h1 {
+            color: #d1b4e3;
+            font-size: 3em;
+            margin-bottom: 20px;
+            letter-spacing: 0.15em;
+      
+        }
+
+        .cards {
+            display: flex;
+            justify-content: space-around;
+            width: 70%;
+        }
+
+        .card {
+            width: 150px;
+            height: 150px;
+            transition: opacity 0.3s ease;
+            margin: 0 20px; /* Add space between cards */
+        }
+
+        .yellow {
+            background-color: yellow;
+        }
+
+        .pink {
+            background-color: pink;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .green {
+            background-color: limegreen;
+        }
+
+        /* Hover effect */
+        .card:hover {
+            opacity: 1;
+        }
+
+        .cards:hover .card:not(:hover) {
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>CARDS</h1>
+        <div class="cards">
+            <div class="card yellow"></div>
+            <div class="card pink"></div>
+            <div class="card red"></div>
+            <div class="card green"></div>
+        </div>
+    </div>
+</body>
+</html>
