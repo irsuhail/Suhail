@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MI Store</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+    }
+
+    /* NAVBAR (Top Bar) */
+    .navbar {
+      background-color: #fff;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .navbar-logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar-logo img {
+      width: 40px;
+      margin-right: 15px;
+    }
+
+    .navbar-menu {
+      display: flex;
+      gap: 20px;
+    }
+
+    .navbar-menu a {
+      text-decoration: none;
+      color: #000;
+      font-size: 1rem;
+      padding: 10px;
+      transition: color 0.3s;
+    }
+
+    .navbar-menu a:hover {
+      color: #ff6600;
+    }
+
+    /* PRODUCT GRID (Middle Bar) */
+    .container {
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .product-card {
+      background-color: #fff;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .product-card img {
+      width: 80%;
+      max-width: 150px;
+      margin-bottom: 15px;
+    }
+
+    .product-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    .product-card .price {
+      font-size: 1.1rem;
+      color: #ff6600;
+    }
+
+    .product-card .original-price {
+      text-decoration: line-through;
+      color: #888;
+      margin-left: 10px;
+    }
+
+    /* PROMO BANNER (Bottom Bar) */
+    .promo-banner {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #ffe9e5;
+      padding: 30px;
+      margin: 30px 0;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .promo-banner h2 {
+      margin: 0;
+      font-size: 1.5rem;
+      color: #ff6600;
+    }
+
+    .promo-banner p {
+      margin-top: 10px;
+      color: #888;
+    }
+
+    .promo-banner button {
+      margin-top: 20px;
+      background-color: #ff6600;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .promo-banner button:hover {
+      background-color: #ff8533;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR (Top Bar) -->
+  <div class="navbar">
+    <div class="navbar-logo">
+      <img src="https://www.mi.com/favicon.ico" alt="Mi Logo">
+      <span>Mi Store</span>
+    </div>
+    <div class="navbar-menu">
+      <a href="#">Phone</a>
+      <a href="#">TV & Smart Home</a>
+      <a href="#">Tablet</a>
+      <a href="#">Lifestyle</a>
+    </div>
+  </div>
+
+  <!-- PRODUCT GRID (Middle Bar) -->
+  <div class="container">
+    <div class="product-grid">
+
+      <!-- Product Card 1 -->
+      <div class="product-card">
+        <img src="https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1598953987.67371928.png?thumb=1&w=300&f=webp&q=85" alt="Redmi Earphones">
+        <h3>Redmi Earphones</h3>
+        <div class="price">
+          ₹449
+          <span class="original-price">₹599</span>
+        </div>
+      </div>
+
+      <!-- Product Card 2 -->
+      <div class="product-card">
+        <img src="https://i03.appmifile.com/861_item_in/01/09/2023/a42193897ee870f847b2aaeeea47e85f.png?thumb=1&w=300&f=webp&q=85" alt="Mi Dual Driver In-ear">
+        <h3>Mi Dual Driver In-ear Earphones</h3>
+        <div class="price">
+          ₹799
+          <span class="original-price">₹999</span>
+        </div>
+      </div>
+
+      <!-- Product Card 3 -->
+      <div class="product-card">
+        <img src="https://i03.appmifile.com/83_item_in/04/07/2024/7c5608a3feed31f769249dc76060efd0.png?thumb=1&w=300&f=webp&q=85" alt="Redmi Sonic Bass Wireless">
+        <h3>Redmi Sonic Bass Wireless Earphones</h3>
+        <div class="price">
+          ₹1,299
+          <span class="original-price">₹2,999</span>
+        </div>
+      </div>
+
+      <!-- Product Card 4 -->
+      <div class="product-card">
+        <img src="https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1613844064.93574921.jpg?thumb=1&w=300&f=webp&q=85" alt="Mi Portable Bluetooth Speaker">
+        <h3>Mi Portable Bluetooth Speaker (16W)</h3>
+        <div class="price">
+          ₹2,499
+          <span class="original-price">₹3,499</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- PROMO BANNER (Bottom Bar) -->
+  <div class="promo-banner">
+    <div>
+      <h2>Save Up to 65% On Chargers & Cables</h2>
+      <p>Free Delivery on All Products</p>
+      <button>Buy Now</button>
+    </div>
+  </div>
+
+  <!-- NEW PRODUCT GRID (Additional Products Below Promo Banner) -->
+  <div class="container">
+    <div class="product-grid">
+
+      <!-- Product Card 5 -->
+      <div class="product-card">
+        <img src="https://i03.appmifile.com/432_item_in/04/07/2024/c01b2ab381cc719be6c329b3404a720a.png?thumb=1&w=300&f=webp&q=85" alt="Xiaomi 120W HyperCharge Adapter">
+        <h3>Xiaomi 120W HyperCharge Adapter</h3>
+        <div class="price">
+          ₹2,999
+          <span class="original-price">₹5,999</span>
+        </div>
+      </div>
+
+      <!-- Product Card 6 -->
+      <div class="product-card">
+        <img src="https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1575870690.22854399.jpg?thumb=1&w=300&f=webp&q=85" alt="Mi 2A Fast Charger with Cable">
+        <h3>Mi 2A Fast Charger with Cable</h3>
+        <div class="price">
+          ₹449
+          <span class="original-price">₹599</span>
+        </div>
+      </div>
+
+      <!-- Product Card 7 -->
+      <div class="product-card">
+        <img src="https://i03.appmifile.com/347_item_in/04/07/2024/6717f1f634aa8feeaff6d936a0e23e51.png?thumb=1&w=300&f=webp&q=85" alt="Xiaomi SonicCharge 2.0 Cable">
+        <h3>Xiaomi SonicCharge 2.0 Cable</h3>
+        <div class="price">
+          ₹249
+          <span class="original-price">₹699</span>
+        </div>
+      </div>
+
+      <!-- Product Card 8 -->
+      <div class="product-card">
+        <img src="https://i03.appmifile.com/763_item_in/16/05/2023/869a64e04768ba2ca37109040f8757d6.jpg?thumb=1&w=300&f=webp&q=85" alt="Mi 18W Dual Port Charger">
+        <h3>Mi 18W Dual Port Charger + Mi USB Cable 120cm</h3>
+        <div class="price">
+          ₹899
+          <span class="original-price">₹1,397</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
