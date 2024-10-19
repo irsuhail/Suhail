@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled List</title>
+    <style>
+        ul {
+            border: 1px solid black;
+            padding: 20px;
+            list-style-type: disc;
+        }
+
+       
+        #list1 li:nth-child(odd) {
+            color: red;
+        }
+
+        #list1 li:nth-child(odd)::marker {
+            color: red;
+        }
+
+        #list1 li:nth-child(even)::marker {
+            color: black;
+        }
+
+        #list1 li:nth-child(even) {
+            color: black;
+        }
+
+        
+        ul:nth-of-type(2) li {
+            color: purple;
+        }
+
+        ul:nth-of-type(2) li::marker {
+            color: purple;
+        }
+    </style>
+</head>
+<body>
+    <ul id="list1">
+        <li>item-1</li>
+        <li>item-2</li>
+        <li>item-3</li>
+        <li>item-4</li>
+        <li>item-5</li>
+        <li>item-6</li>
+        <li>item-7</li>
+        <li>item-8</li>
+        <li>item-9</li>
+        <li>item-10</li>
+    </ul>
+    <ul>
+        <li>item-1</li>
+        <li>item-2</li>
+        <li>item-3</li>
+        <li>item-4</li>
+        <li>item-5</li>
+        <li>item-6</li>
+        <li>item-7</li>
+        <li>item-8</li>
+        <li>item-9</li>
+        <li>item-10</li>
+    </ul>
+</body>
+</html>
