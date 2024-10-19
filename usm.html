@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #111;
+            font-family: 'Arial', sans-serif;
+            color: #fff;
+            padding: 50px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #ccc;
+        }
+
+        h2.subtitle {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #ccc;
+            font-size: 20px;
+        }
+
+        .pricing-section {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .card {
+            background-color: #1a1a1a;
+            border-radius: 10px;
+            padding: 40px;
+            width: 300px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .card h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .card h3 {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .card p {
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .features {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+
+        .features li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .features li:before {
+            content: "✔";
+            color: #007bff;
+            margin-right: 10px;
+        }
+
+        .basic-features li:before {
+            content: "—";
+            color: #ff6347;
+            margin-right: 10px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 20px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: bold;
+            text-decoration: none;
+            width: 100%;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-get-started {
+            background-color: #6e00ff;
+            color: white;
+        }
+
+        .btn-get-started:hover {
+            background-color: #4a00cc;
+        }
+
+        .btn-basic {
+            background-color: transparent;
+            border: 2px solid #fff;
+            color: white;
+        }
+
+        .btn-basic:hover {
+            background-color: white;
+            color: black;
+        }
+
+        .toggle-switch {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 20px;
+        }
+
+        .toggle-switch input {
+            display: none;
+        }
+
+        .toggle-switch label {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .toggle-switch label span {
+            font-size: 14px;
+            margin-right: 5px;
+        }
+
+        .toggle-btn {
+            display: inline-block;
+            width: 50px;
+            height: 24px;
+            border-radius: 12px;
+            background-color: #444;
+            position: relative;
+            margin-left: 10px;
+        }
+
+        .toggle-btn::before {
+            content: '';
+            width: 22px;
+            height: 22px;
+            background-color: #fff;
+            border-radius: 50%;
+            position: absolute;
+            top: 1px;
+            left: 1px;
+            transition: transform 0.3s ease;
+        }
+
+        input:checked + label .toggle-btn::before {
+            transform: translateX(26px);
+        }
+
+        .toggle-text {
+            color: #aaa;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>The simplest pricing in the industry. You won't need a calculator for this.</h1>
+
+    <h2 class="subtitle">One Price for Everything</h2>
+
+    <div class="pricing-section">
+      
+        <div class="card">
+            <h2>Pro</h2>
+            <p>Includes everything you need for your professional website</p>
+            <h3>$20 <span style="font-size: 14px;">/ Site / Month (billed annually)</span></h3>
+
+            <div class="toggle-switch">
+                <span class="toggle-text">Bill Monthly</span>
+                <input type="checkbox" id="billing">
+                <label for="billing">
+                    <span class="toggle-btn"></span>
+                </label>
+                <span class="toggle-text">Bill Yearly</span>
+            </div>
+
+            <ul class="features">
+                <li>Custom Domains</li>
+                <li>GDPR Solution</li>
+                <li>Beautiful Site Design</li>
+                <li>Super-Fast Hosting</li>
+                <li>Analytics</li>
+                <li>Custom Forms</li>
+                <li>Blogging</li>
+                <li>Password Protection</li>
+                <li>Multilingual Sites</li>
+                <li>User Management</li>
+                <li>Unlimited Pages</li>
+                <li>Unlimited Team Members</li>
+            </ul>
+
+            <a href="#" class="btn btn-get-started">Get Started</a>
+        </div>
+
+       
+        <div class="card">
+            <h2>Basic</h2>
+            <p>Publish your site for free with almost all pro features.</p>
+            <h3>Free</h3>
+            <ul class="features basic-features">
+                <li>No Custom Domains</li>
+                <li>"Made with Umso" Branding</li>
+            </ul>
+            <p>No credit card required</p>
+            <a href="#" class="btn btn-basic">Get Started</a>
+        </div>
+    </div>
+
+</body>
+</html>
