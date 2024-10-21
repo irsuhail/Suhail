@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puma Responsive Page</title>
+    <head>
+        <style>
+            * {
+                margin:0;
+                padding:0;
+                box-sizing: border-box;
+
+            }
+
+            body {
+                font-family:Arial,  sans-serif;
+            }
+
+            .navbar {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 1rem;
+                background-color: #000;
+                color: #fff;
+            }
+
+            .navbar .main-nav ul {
+                display: flex;
+                life-style:none;
+            }
+
+            .navbar .main-nav ul li {
+                margin-right: 1rem;
+            }
+
+            .navbar .main-nav ul li a {
+                color: #fff;
+                text-decoration: none;
+            }
+
+            .promo-banner{
+                background-color: #d3d3d3;
+                padding: 1rem;
+                text-align: center;
+                font-size: 1rem;
+            }
+
+            .main-content{
+                padding: 2rem;
+            }
+
+            .hero {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 2rem 0;
+            }
+
+            .hero-text {
+                max-width: 40%;
+
+            }
+
+            .hero-text h1 {
+                font-size: 3 rem;
+                margin-bottom:1 rem;
+            }
+
+            .hero-text p {
+                font-size: 1.2rem;
+                margin-bottom: 1rem;
+            }
+
+            .btn {
+                background-color: black;
+                color: white;
+                padding: 0.8rem 2 rem;
+                text-decoration: none;
+                margin-right: 1rem;
+               
+            }
+
+            .btn-secondary {
+                background-color: transparent;
+                color:black;
+                padding: 0.8rem 2 rem;
+                text-decoration: none;
+                border:1 px solid black;
+
+            }
+            
+            .hero-image img {
+                width:100%;
+                max-width: 600px;
+            }
+
+            .product-grid{
+                display: grid;
+                grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+                gap:1.5rem;
+                margin-top: 3rem;
+            }
+
+            .product-item {
+                text-align: center;
+            }
+            
+            .product-item img {
+                width: 100%;
+                max-width: 250px;
+            }
+
+            .price {
+                color:#888;
+            }
+
+            @media (max-width:768px){
+                .hero {
+                    flex-direction: column;
+                }
+
+                .hero-text{
+                    max-width: 100%;
+                    text-align: center;
+                }
+
+                .hero-image {
+                    margin-top: 2rem;
+                }
+
+
+                .navbar .main-nav ul {
+                    flex-direction: column;
+                    align-items: center;
+                }
+            }
+
+            .playbook {
+                display: grid;
+                grid-template-columns: repeat(auto-fit,minmax(200px,4fr));
+                gap:10rem;
+                margin-top: 3rem;
+                
+                
+            }
+ 
+
+
+        </style>
+    </head>
+    <body>
+        <header class="navbar">
+            <div class="logo">PUMA</div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#">New</a></li>
+                    <li><a href="#">Women</a></li>
+                    <li><a href="#">Men</a></li>
+                    <li><a href="#">Kids</a></li>
+                    <li><a href="#">Motosport</a></li>
+                    <li><a href="#">FENTY x PUMA</a></li>
+                    <li><a href="#">Collaborations</a></li>
+                    <li><a href="#">Sports</a></li>
+                    <li><a href="#">Sale</a></li>
+                    <li><a href="#">Bulk Savings</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="promo-banner">
+            <p>EXTRA 15% OFF ON ORDERS ABOVE $3999</p>
+        </section>
+
+        <main class="main-content">
+            <section class="hero">
+                <div class="hero-text">
+                    <h1>PALERMO</h1>
+                    <P>REWRITRE THE CLASSICS</P>
+
+                    <a href="#" class="btn">Shop Now</a>
+                    <a href="#" class="btn-secondary">Explore Style Guide</a>
+                </div>
+
+                <div class="hero-image">
+                    img src="" alt="Palermo Sneakers">
+                </div>
+            </section>
+
+            <section class="product-grid">
+                <div class="product-item">
+                    <img src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_300,h_300/global/396841/01/sv01/fnd/IND/fmt/png/Palermo-Vintage-Unisex-Sneakers" alt="Palermo Vintage Unisex Sneakers">
+                    <p>Palermo Vintage Unisex Sneakers</p>
+                    <p class="price">$6,999</p>
+                </div>
+
+                <div class="product-item">
+                    <img src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_300,h_300/global/396841/01/sv01/fnd/IND/fmt/png/Palermo-Vintage-Unisex-Sneakers" alt="Palermo Vintage Unisex Sneakers">
+                    <p>Palermo Vintage Lth Sneakers</p>
+                    <p class="price">$6,999</p>
+                </div>
+
+                <div class="product-item">
+                    <img src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_300,h_300/global/396841/01/sv01/fnd/IND/fmt/png/Palermo-Vintage-Unisex-Sneakers" alt="Palermo Vintage Unisex Sneakers"> 
+                    <p>Palermo players Lane Unisex Sneakers</p>
+                    <p class="price">$7,999</p>
+                </div>
+
+                <div class="product-item">
+                    <img src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_300,h_300/global/396841/01/sv01/fnd/IND/fmt/png/Palermo-Vintage-Unisex-Sneakers" alt="Palermo Vintage Unisex Sneakers">
+                    <p>Palermo Vintage Unisex Sneakers</p>
+                    <p class="price">$6,999</p>
+                </div>
+            </section>
+        </main>
+
+       <section class="playbook">
+        <div class="category">
+            <h3>Streetwear Staple</h3>
+            <a href="#" class="btn">Shop Now</a>
+        </div>
+
+        <div class="category">
+            <h3>Night-Out Looks</h3>
+            <a href="#" class="btn">Shop Now</a>
+        </div>
+
+        <div class="category">
+            <h3>The Festive Edit</h3>
+            <a href="#" class="btn">Shop Now</a>
+        </div>
+
+
+       </section>
+
+
+    </body>
