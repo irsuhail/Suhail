@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newton School Navbar</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(90deg, #003366, #000000);
+            padding: 15px 30px;
+            color: white;
+        }
+
+        .navbar-logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-logo img {
+            width: 40px;
+            margin-right: 10px;
+        }
+
+        .navbar-menu {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .navbar-menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        .navbar-menu a:hover {
+            color: #ffcc00;
+        }
+
+        .new-badge {
+            background-color: #ffcc00;
+            color: black;
+            border-radius: 12px;
+            padding: 2px 8px;
+            font-size: 12px;
+            margin-left: 5px;
+        }
+
+        .navbar-signup {
+            background-color: #0066ff;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar-signup:hover {
+            background-color: #004db3;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <img src="https://cdn.prod.website-files.com/62e8d2ea218fb7676b6892a6/66eab879450226f674fc9056_Logo-01%20(1)%201%20(1).svg" alt="Newton School Logo">
+            <span>Newton School</span>
+        </div>
+        <div class="navbar-menu">
+            <a href="#">Data Science & AI</a>
+            <a href="#">B. Tech in CS & AI <span class="new-badge">NEW</span></a>
+            <a href="#">Newton Edge</a>
+            <a href="#">Refer & Earn</a>
+            <a href="#">More</a>
+        </div>
+        <a href="#" class="navbar-signup">Sign up</a>
+    </nav>
+
+</body>
+</html>
