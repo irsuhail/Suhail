@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complex Navigation Bar</title>
+    <style>
+        
+        nav {
+            background-color: #333;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav li {
+            margin-right: 20px;
+        }
+
+        
+        nav > ul > li > a {
+            color: white;
+            text-decoration: none;
+        }
+
+        
+       
+        nav > ul > li:nth-child(1) a {
+            color: lightblue; 
+        }
+
+       
+        nav > ul > li:nth-child(2) a {
+            color: lightgreen; 
+        }
+
+       
+        nav > ul > li:nth-child(3) a {
+            color: lightcoral; 
+        }
+
+       
+        nav a:hover {
+            color: yellow; 
+            text-decoration: underline;
+        }
+
+        
+        nav a:active {
+            color: red; 
+        }
+
+       
+        nav > ul > li > a {
+            font-weight: bold; 
+        }
+
+        
+        nav a[href^="https"] {
+            color: #ff6347; 
+            font-weight: normal; 
+        }
+
+       
+        nav a[href^="https"]:hover {
+            color: #ff4500; 
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="https://github.com/:">External Link</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
