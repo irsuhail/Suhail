@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky and Fixed Positioning</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 20px;
+            font-size: 24px;
+            text-align: center;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #2196f3;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 18px;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        main {
+            padding: 20px;
+            margin-bottom: 50px; 
+        }
+
+        p {
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Sticky Header - Scroll Down to See the Effect
+    </header>
+    <main>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.</p>
+        <p>Cras vehicula, leo a semper facilisis, lorem nunc facilisis ligula, vel interdum eros turpis non massa.</p>
+        <p>Praesent at augue vitae erat porttitor luctus. Aenean pharetra orci ut libero laoreet, at laoreet arcu tristique.</p>
+        <p>Suspendisse potenti. Integer sit amet eros a orci consectetur scelerisque vel non erat.</p>
+        <p>Mauris eget augue ut metus tempor bibendum nec quis orci. Aliquam erat volutpat.</p>
+        <p>Proin vel nisi id mi eleifend elementum. In eu augue convallis, porttitor metus et, volutpat tortor.</p>
+        <p>Donec dignissim, erat nec interdum facilisis, velit nulla sagittis orci, sit amet luctus nunc libero nec eros.</p>
+        <p>Etiam vehicula, purus at sollicitudin finibus, elit erat gravida justo, nec pellentesque eros erat in urna.</p>
+        <p>Sed at lorem tincidunt, auctor turpis non, venenatis eros. Integer a magna nec erat euismod venenatis.</p>
+        <p>Curabitur venenatis dui sit amet dui convallis aliquet. Integer sit amet tincidunt nisi.</p>
+    </main>
+    <footer>
+        Fixed Footer - Always Visible
+    </footer>
+</body>
+</html>
