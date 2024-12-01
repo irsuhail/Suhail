@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exploring Flex-Direction</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            gap: 30px;
+            background-color: #f0f0f0;
+        }
+
+        .flex-container {
+            display: flex; 
+            justify-content: space-around; 
+            align-items: center; 
+            gap: 10px; 
+            padding: 20px;
+            border: 2px solid #4caf50;
+            border-radius: 8px;
+            background-color: #ffffff;
+            width: 80%;
+            max-width: 600px;
+        }
+
+        
+        .row-layout {
+            flex-direction: row; 
+        }
+
+       
+        .column-layout {
+            flex-direction: column; 
+        }
+
+        .flex-item {
+            background-color: #4caf50;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            border-radius: 5px;
+            width: 80px;
+            height: 50px;
+            line-height: 50px; 
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-container row-layout">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+        <div class="flex-item">Item 4</div>
+    </div>
+
+    <div class="flex-container column-layout">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+        <div class="flex-item">Item 4</div>
+    </div>
+</body>
+</html>
