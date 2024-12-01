@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debugging CSS</title>
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #4caf50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        main {
+            display: flex;
+            flex-wrap: wrap; 
+            gap: 20px; 
+            margin: 20px 0;
+        }
+
+        .card {
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            flex: 1 1 calc(33.333% - 20px); 
+            max-width: calc(33.333% - 20px); 
+            padding: 20px;
+        }
+
+        .card img {
+            max-width: 100%;
+            border-radius: 8px 8px 0 0; 
+            display: block;
+        }
+
+        .card h2 {
+            margin: 10px 0;
+            font-size: 20px;
+        }
+
+        .card p {
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #2196f3;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            .card {
+                flex: 1 1 calc(50% - 20px); 
+            }
+        }
+
+        @media (max-width: 480px) {
+            .card {
+                flex: 1 1 100%; 
+            }
+
+            footer {
+                position: relative; 
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Debugging CSS: Fixed Layout</h1>
+    </header>
+    <main>
+        <div class="card">
+            <img src="https://cdn.pixabay.com/photo/2022/01/17/06/38/altai-6943982_1280.jpg" alt="Placeholder Image">
+            <h2>Card Title 1</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="card">
+            <img src="https://cdn.pixabay.com/photo/2022/01/17/06/38/altai-6943982_1280.jpg" alt="Placeholder Image">
+            <h2>Card Title 2</h2>
+            <p>Suspendisse potenti. Integer sit amet eros a orci consectetur scelerisque.</p>
+        </div>
+        <div class="card">
+            <img src="https://cdn.pixabay.com/photo/2022/01/17/06/38/altai-6943982_1280.jpg" alt="Placeholder Image">
+            <h2>Card Title 3</h2>
+            <p>Praesent at augue vitae erat porttitor luctus.</p>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Debugged Layout</p>
+    </footer>
+</body>
+</html>
