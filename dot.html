@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        .item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+        }
+
+        .item-1 {
+            background: linear-gradient(to right, #FF69B4, #FFB6C1);
+        }
+
+        .item-2 {
+            background: linear-gradient(to right, #89CFF0, #A0C4FF);
+        }
+
+        .item-3 {
+            background: linear-gradient(to right, #B2FFFF, #90EE90);
+        }
+
+        .item-4 {
+            background: linear-gradient(to right, #FF69B4, #FFC0CB, #FFFFE0);
+        }
+
+        .item-5 {
+            background: linear-gradient(to right, #D8BFD8, #D3D3D3, #C0C0C0);
+        }
+
+        .item-6 {
+            background: linear-gradient(to right, #ADD8E6, #B0E0E6, #AFEEEE);
+        }
+
+        .item-7 {
+            background: linear-gradient(to right, #AFEEEE, #B0E0E6, #ADD8E6);
+        }
+
+        .item-8 {
+            background: linear-gradient(to right, #B0C4DE, #C0D8FF, #C0C0C0);
+        }
+
+        .item-9 {
+            background: linear-gradient(to right, #AFEEEE, #B0E0E6, #ADD8E6);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item item-1">1</div>
+        <div class="item item-2">2</div>
+        <div class="item item-3">3</div>
+        <div class="item item-4">4</div>
+        <div class="item item-5">5</div>
+        <div class="item item-6">6</div>
+        <div class="item item-7">7</div>
+        <div class="item item-8">8</div>
+        <div class="item item-9">9</div>
+    </div>
+</body>
+</html>
