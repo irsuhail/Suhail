@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create and Remove Elements</title>
+    <style>
+        #container {
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            min-height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Create and Remove Elements</h1>
+    <button id="addParagraph">Add Paragraph</button>
+    <button id="removeParagraph">Remove Last Paragraph</button>
+    <div id="container">
+        <!-- Paragraphs will be added here -->
+    </div>
+
+    <script>
+        // Select the buttons and the container
+        const addParagraphButton = document.getElementById("addParagraph");
+        const removeParagraphButton = document.getElementById("removeParagraph");
+        const container = document.getElementById("container");
+
+        // Function to add a new paragraph
+        addParagraphButton.addEventListener("click", () => {
+            // Create a new paragraph element
+            const newParagraph = document.createElement("p");
+            // Set the text content of the paragraph
+            newParagraph.textContent = "This is a new paragraph.";
+            // Append the paragraph to the container
+            container.appendChild(newParagraph);
+        });
+
+        // Function to remove the last paragraph
+        removeParagraphButton.addEventListener("click", () => {
+            // Check if there are any paragraphs in the container
+            if (container.lastChild) {
+                // Remove the last child (paragraph) from the container
+                container.removeChild(container.lastChild);
+            }
+        });
+    </script>
+</body>
+</html>
