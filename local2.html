@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Theme Selector</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        select {
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dynamic Theme Selector</h1>
+    <label for="themeSelector">Choose a theme:</label>
+    <select id="themeSelector">
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+        <option value="blue">Blue</option>
+    </select>
+
+    <script>
+        const themeSelector = document.getElementById('themeSelector');
+
+        // Function to apply the selected theme
+        function applyTheme(theme) {
+            if (theme === 'dark') {
+                document.body.style.backgroundColor = '#333';
+                document.body.style.color = '#fff';
+            } else if (theme === 'blue') {
+                document.body.style.backgroundColor = '#87CEEB';
+                document.body.style.color = '#000';
+            } else {
+                document.body.style.backgroundColor = '#fff';
+                document.body.style.color = '#000';
+            }
+        }
+
+        // Load the theme from sessionStorage on page load
+        window.addEventListener('load', () => {
+            const savedTheme = sessionStorage.getItem('selectedTheme') || 'light';
+            themeSelector.value = savedTheme;
+            applyTheme(savedTheme);
+        });
+
+        // Event listener for theme selection change
+        themeSelector.addEventListener('change', () => {
+            const selectedTheme = themeSelector.value;
+            sessionStorage.setItem('selectedTheme', selectedTheme);
+            applyTheme(selectedTheme);
+        });
+    </script>
+</body>
+</html>
