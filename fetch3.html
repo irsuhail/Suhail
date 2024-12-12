@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      max-width: 400px;
+    }
+    form {
+      margin-bottom: 20px;
+    }
+    input {
+      width: calc(100% - 100px);
+      padding: 10px;
+      margin-right: 10px;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    .error {
+      color: red;
+      margin-top: 20px;
+    }
+    .weather-data {
+      margin-top: 20px;
+      font-size: 1.2em;
+    }
+  </style>
+</head>
+<body>
+  <h1>Weather Fetch App</h1>
+  <form id="weatherForm">
+    <input type="text" id="city" placeholder="Enter city name" required>
+    <button type="submit">Get Weather</button>
+  </form>
+  <div id="weather" class="weather-data"></div>
+  <div id="error" class="error" style="display: none;"></div>
+
+  <script>
+    const weatherForm = document.getElementById('weatherForm');
+    const cityInput = document.getElementById('city');
+    const weatherDisplay = document.getElementById('weather');
+    const errorDisplay = document.getElementById('error');
+
+    // Event listener for form submission
+    weatherForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      // Clear previous outputs
+      weatherDisplay.textContent = '';
+      errorDisplay.style.display = 'none';
+
+      const city = cityInput.value.trim();
+
+      // Validate user input
+      if (!city) {
+        errorDisplay.style.display = 'block';
+        errorDisplay.textContent = 'Please enter a valid city name.';
+        return;
+      }
+
+      await fetchWeather(city);
+    });
+
+    async function fetchWeather(city) {
+      const apiKey = '837c0bfb7fdd271aff0169bc32b2830b'; // Provided API key
+      const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
+
+      try {
+        const response = await fetch(url);
+
+        // Check for HTTP errors
+        if (!response.ok) {
+          throw new Error('City not found or an error occurred.');
+        }
+
+        const data = await response.json();
+
+        // Display weather data
+        weatherDisplay.textContent = `Weather in ${data.name}: ${data.main.temp}°C, ${data.weather[0].description}.`;
+      } catch (error) {
+        // Handle errors and display error message
+        errorDisplay.style.display = 'block';
+        errorDisplay.textContent = error.message || 'Failed to fetch weather data. Please try again later.';
+      }
+    }
+  </script>
+</body>
+</html>
