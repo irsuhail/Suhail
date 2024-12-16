@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sorting Products</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    li {
+      padding: 5px 0;
+    }
+    button {
+      padding: 10px;
+      margin: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Product Sorting</h1>
+  <button id="sortByPriceAsc">Sort by Price (Ascending)</button>
+  <button id="sortByPriceDesc">Sort by Price (Descending)</button>
+  <button id="sortByNameAsc">Sort by Name (Ascending)</button>
+  <button id="sortByNameDesc">Sort by Name (Descending)</button>
+  <ul id="productList"></ul>
+
+  <script>
+    const products = [
+      { name: 'Phone', price: 800 },
+      { name: 'Laptop', price: 1500 },
+      { name: 'Tablet', price: 400 }
+    ];
+
+    const productList = document.getElementById('productList');
+
+    
+    function displayProducts() {
+      productList.innerHTML = ''; 
+      products.forEach(product => {
+        const li = document.createElement('li');
+        li.textContent = `${product.name} - $${product.price}`;
+        productList.appendChild(li);
+      });
+    }
+
+   
+    document.getElementById('sortByPriceAsc').addEventListener('click', () => {
+      products.sort((a, b) => a.price - b.price);
+      displayProducts();
+    });
+
+    document.getElementById('sortByPriceDesc').addEventListener('click', () => {
+      products.sort((a, b) => b.price - a.price);
+      displayProducts();
+    });
+
+   
+    document.getElementById('sortByNameAsc').addEventListener('click', () => {
+      products.sort((a, b) => a.name.localeCompare(b.name));
+      displayProducts();
+    });
+
+    document.getElementById('sortByNameDesc').addEventListener('click', () => {
+      products.sort((a, b) => b.name.localeCompare(a.name));
+      displayProducts();
+    });
+
+    
+    displayProducts();
+  </script>
+</body>
+</html>
